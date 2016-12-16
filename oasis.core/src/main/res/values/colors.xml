@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="oaCyan">#00BCD4</color>
+    <color name="oaPink">#E91E63</color>
+    <color name="oaLightGreen">#8BC34A</color>
+
+    <color name="oaCyan700">#0097A7</color>
+</resources>
