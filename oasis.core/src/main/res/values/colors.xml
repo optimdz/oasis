@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="oaCyan">#00BCD4</color>
-    <color name="oaPink">#E91E63</color>
-    <color name="oaLightGreen">#8BC34A</color>
+    <color name="oaRed">#f44336</color>
+    <color name="oaPink">#e91e63</color>
+    <color name="oaPurple">#9c27b0</color>
+    <color name="oaDeepBlue">#673ab7</color>
+    <color name="oaIndigo">#3f51b5</color>
+    <color name="oaBLue">#2196f3</color>
+    <color name="oaLightBLue">#03a9f4</color>
+    <color name="oaCyan">#00bcd4</color>
+    <color name="oaTeal">#009688</color>
+    <color name="oaGreen">#4caf50</color>
+    <color name="oaLightGreen">#8bc34a</color>
+    <color name="oaLime">#cddc39</color>
+    <color name="oaYellow">#ffeb3b</color>
+    <color name="oaAmber">#ffc107</color>
+    <color name="oaOrange">#ff9800</color>
+    <color name="oaDeepOrange">#ff5722</color>
+    <color name="oaBrown">#795548</color>
+    <color name="oaGrey">#9e9e9e</color>
+    <color name="oaBlueGrey">#607d8b</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
 
     <color name="oaCyan700">#0097A7</color>
+    <color name="oaPink700">#C2185B</color>
+
+
 </resources>
