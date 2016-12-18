@@ -1,5 +1,9 @@
-# Oasis Library
-## How to use the library as a project
+
+# Wikis
+* [oaActivity](https://github.com/optimdz/oasis/wiki/oaActivity)
+* [Tools Helpers Class](https://github.com/optimdz/oasis/wiki/Tools-Helpers-Class)
+
+# Quick Start
 ### step 01 : Clone the project
 `git clone https://github.com/optimdz/oasis.git`
 ### step 02 : On your project 
@@ -18,12 +22,4 @@ click on the menu **File > Project Structure** then follow the steps in the pic 
 ### step 04 : enjoy the awesomeness of oasis :smile: 
 ![](https://raw.githubusercontent.com/optimdz/oasis/master/pic/wiki3.jpg)
 
-## First implemented helpers
-
-### oaActivity class => extends AppCompatActivity and contains
-  - find(id) => better than (TYPE)findViewById(id);
-
-### Tools static class => utilities contains :
-  - getStringDialog(Activity activity, String title, String default_value, final oaCallBack callback)
-  ![alt text](https://raw.githubusercontent.com/optimdz/oasis/master/pic/getStringDialog.jpg "getStringDialog")
 
