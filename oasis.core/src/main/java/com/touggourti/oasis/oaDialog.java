@@ -22,7 +22,7 @@ public class oaDialog extends Dialog {
     private TextInputLayout inputlayout;
     private RelativeLayout relativeLayout;
 
-    public oaDialog(Context context, final oaCallBack callBack) {
+    public oaDialog(Context context, final Tools.oaCallBack callBack) {
         super(context);
         super.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setContentView(R.layout.custom_dialog);
@@ -56,12 +56,17 @@ public class oaDialog extends Dialog {
         inputlayout.setHint(hint);
     }
 
+    public void setDefaultValue(String defaultValue) {
+        text.setText(defaultValue);
+
+        Tools.setCursorEnd(text);
+
+    }
+
 
     public <T> T find(int id) {
         return (T) findViewById(id);
     }
 
-    public interface oaCallBack {
-        void returnString(String result);
-    }
+
 }

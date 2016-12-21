@@ -12,11 +12,18 @@ public class oaApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/nat.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
+        String _font = getApplicationFont();
+        if (_font == null) {
+            CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                    .setDefaultFontPath(_font)
+                    .setFontAttrId(R.attr.fontPath)
+                    .build()
+            );
+        }
+    }
+
+    public String getApplicationFont() {
+        return null;
     }
 }
 

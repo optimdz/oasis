@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.touggourti.oasis.Tools;
 import com.touggourti.oasis.oaActivity;
 import com.touggourti.oasis.oaDialog;
 
@@ -26,17 +27,15 @@ public class MainActivity extends oaActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                oaDialog dialog = new oaDialog(MainActivity.this, new oaDialog.oaCallBack() {
-                    @Override
-                    public void returnString(String result) {
-                        Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
-                    }
-                });
 
-                dialog.setImageTitleBar(R.mipmap.ic_launcher);
-                dialog.setBackgroundTitleBar(Color.parseColor("#f44336"));
-                dialog.setHint("input your message");
-                dialog.show();
+                MainActivity.this.getStringDialog("hello", "You message", "#18BC9C",
+                        R.mipmap.ic_launcher, new Tools.oaCallBack() {
+                            @Override
+                            public void returnString(String str) {
+                                Toast.makeText(MainActivity.this, str, Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
             }
         });
     }
