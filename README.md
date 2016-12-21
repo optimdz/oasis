@@ -6,8 +6,8 @@
 # Quick Start
 ### step 01 : Clone the project
 `git clone https://github.com/optimdz/oasis.git`
-### step 02 : On your project 
-make your `settings.gradle` like : 
+### step 02 : On your project
+make your `settings.gradle` like :
 ```
 include ':app',':oasis.core'
 project(':oasis.core').projectDir=new File('../../path to ouasis library/oasis/oasis.core')
@@ -19,7 +19,12 @@ use relative path (../../ ....) if its not in the same folder as your app
 ### step 03 : add dependency
 click on the menu **File > Project Structure** then follow the steps in the pic bellow
 ![](https://raw.githubusercontent.com/optimdz/oasis/master/pic/wiki2.jpg)
-### step 04 : enjoy the awesomeness of oasis :smile: 
+### step 04 : enjoy the awesomeness of oasis :smile:
 ![](https://raw.githubusercontent.com/optimdz/oasis/master/pic/wiki3.jpg)
+<br>
+<br>
+#Screenshot
+![screenshot](https://github.com/optimdz/oasis/blob/master/pic/screenshot.png)
+
 
 
