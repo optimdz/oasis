@@ -27,7 +27,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hello"
+            android:layout_margin="5dp"
             android:id="@+id/textinputlayout">
 
             <EditText

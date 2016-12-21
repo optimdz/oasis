@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutCompat;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -15,13 +16,13 @@ import android.widget.RelativeLayout;
  * Created by geek on 12/20/16.
  */
 
-public class MyDialog extends Dialog {
+public class oaDialog extends Dialog {
     private ImageView imageTitle;
     private EditText text;
     private TextInputLayout inputlayout;
     private RelativeLayout relativeLayout;
 
-    public MyDialog(Context context, final myCallBack callBack) {
+    public oaDialog(Context context, final oaCallBack callBack) {
         super(context);
         super.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setContentView(R.layout.custom_dialog);
@@ -29,15 +30,15 @@ public class MyDialog extends Dialog {
         int width = metrics.widthPixels;
         super.getWindow().setLayout(width - 10, LinearLayoutCompat.LayoutParams.WRAP_CONTENT);
 
-        relativeLayout = (RelativeLayout) super.findViewById(R.id.layout_actionbar);
-        imageTitle = (ImageView) super.findViewById(R.id.imagetitle);
-        text = (EditText) super.findViewById(R.id.contenttext);
-        inputlayout = (TextInputLayout) super.findViewById(R.id.textinputlayout);
-        super.findViewById(R.id.button_ok).setOnClickListener(new View.OnClickListener() {
+        relativeLayout = find(R.id.layout_actionbar);
+        imageTitle = find(R.id.imagetitle);
+        text = find(R.id.contenttext);
+        inputlayout = find(R.id.textinputlayout);
+        ((Button) find(R.id.button_ok)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callBack.returnString(text.getText().toString());
-                MyDialog.super.dismiss();
+                oaDialog.super.dismiss();
             }
         });
 
@@ -56,7 +57,11 @@ public class MyDialog extends Dialog {
     }
 
 
-    public interface myCallBack {
+    public <T> T find(int id) {
+        return (T) findViewById(id);
+    }
+
+    public interface oaCallBack {
         void returnString(String result);
     }
 }

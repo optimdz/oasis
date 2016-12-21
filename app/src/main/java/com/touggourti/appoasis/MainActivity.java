@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.touggourti.oasis.MyDialog;
+import com.touggourti.oasis.oaDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyDialog dialog = new MyDialog(MainActivity.this, new MyDialog.myCallBack() {
+                oaDialog dialog = new oaDialog(MainActivity.this, new oaDialog.oaCallBack() {
                     @Override
                     public void returnString(String result) {
                         Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
                 dialog.setImageTitleBar(R.mipmap.ic_launcher);
                 dialog.setBackgroundTitleBar(Color.parseColor("#f44336"));
+                dialog.setHint("input your message");
                 dialog.show();
             }
         });
